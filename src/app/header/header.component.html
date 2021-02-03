@@ -1,0 +1,22 @@
+<header>
+    <div >
+<mat-toolbar color="primary">
+    Navigation
+    <div class="divHtml"> </div>
+      <!--Home nav button-->
+      <button mat-flat-button style="margin-left: 50px;"routerLink="">Home</button>
+       <button mat-flat-button style="margin-left: 10px;" [routerLink]="['signup']">Sign Up</button>
+       <button mat-flat-button style="margin-left: 10px;" [routerLink]="['login']">Login</button>
+      <button mat-flat-button [matMenuTriggerFor]="menu" color="accent" style="margin-left :10px;" >Show</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>home
+        </button>
+        <button mat-menu-item disabled>disabled
+        </button>
+        <button mat-menu-item>about
+        </button>
+      </mat-menu>
+    
+</mat-toolbar>
+</div>
+</header>

@@ -1,0 +1,80 @@
+
+    <div class="divSignup" style="width: 28%;">
+     <!-- <mat-form-field appearance="fill">
+         <mat-label>First Name</mat-label>
+          <input matInput type="text" placeholder="enter name hees"> 
+       </mat-form-field> <br>
+    <mat-form-field appearance="outline">
+       <mat-label>Enter Last Name</mat-label>
+       <span matPrefix>+1 </span>
+       <input matInput type="text" required color="primary" >
+    </mat-form-field> -->
+    <!-- <button (click)="getData()">get data</button> -->
+    
+    <mat-card  >
+    <mat-card-title>Signup</mat-card-title> <br>
+    <h1 *ngIf="status" >Acccout Created</h1>
+    <form [formGroup]="signupForm" (submit)="submitting()">
+        <mat-form-field appearance="outline" style="width: 48%;">
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" required placeholder="Enter First Name " formControlName="fName">
+        </mat-form-field> &nbsp;
+        <mat-form-field appearance="outline" style="width: 48%;">  
+            <mat-label>Last Name</mat-label> 
+            <input matInput type="text" required placeholder="Enter Last Name" formControlName="lName">
+        </mat-form-field> <br>
+        
+        <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Enter Email</mat-label>
+            <input matInput type="email" required placeholder="Enter Email" formControlName="email" >
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="width: 48%;">
+            <mat-label>Phone Number</mat-label>
+            <span matPrefix >+91 &nbsp;</span>
+            <input matInput type="number" maxlength="1" placeholder="Phone Number"
+             required formControlName="phoneNumber" onKeyPress="if(this.value.length==10) return false;">
+        </mat-form-field> &nbsp;
+        <mat-form-field appearance="outline" style="width: 48%;">
+            <mat-label>DOB</mat-label>
+            <input matInput type="date" required formControlName="dob">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 48%;">
+            <mat-label>Password</mat-label>
+     <input matInput type="password" placeholder="Enter Password" required formControlName="password" 
+     [(ngModel)]="password1"   >
+        </mat-form-field> &nbsp;
+
+        <mat-form-field appearance="outline" style="width: 48%;">
+            <mat-label>Re-enter Password</mat-label>
+            <input matInput type="password" placeholder="Re-enter Password" required 
+            [(ngModel)]="password2" 
+             (ngModelChange)="checkSame($event)" formControlName="cPassword" >
+        </mat-form-field>
+
+        <p *ngIf="errorP" style="color: red;">Password didn't match </p>
+        
+          <button mat-flat-button type="submit" color="accent" style="margin-left: 77%;"
+           [disabled]="errorP || !signupForm.valid">Sign Up</button>
+           <!-- !signupForm.valid  -->
+           
+           
+       </form>
+      
+      
+       
+</mat-card>
+
+
+<br>
+
+<div>
+
+<!-- <label for="exampleInputEmail1">New Email</label>
+<input type="email" name="firstEmail" [(ngModel)]="firstEmail" >
+<label for="exampleInputEmail1">Confirm </label>
+<input type="email" name="secondEmail" [ngModel]="secondEmail"  (ngModelChange)="checkSame($event)"> -->
+</div>
+
+</div>
+

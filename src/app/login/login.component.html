@@ -1,0 +1,31 @@
+<div>
+
+    <div  style="width: 28%; margin-left:35%; margin-bottom: 10px;">
+        <mat-card>
+            <br>
+            <mat-card-title>Login</mat-card-title> <br> <br>
+            <h1 *ngIf="loginS" >Login Succes</h1>
+            <h1 *ngIf="loginF" >Login failed</h1>
+            <form  [formGroup]="loginForm" (submit)="validating()">
+
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Enter Email</mat-label>
+                    <input matInput type="email" required placeholder="Enter Email" 
+                    formControlName="username">
+                </mat-form-field>
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" placeholder="Enter Password" required  
+                    formControlName="password">
+                </mat-form-field> <br> <br>
+                <button mat-flat-button color="accent" type="submit" style="margin-left: 280px;" 
+                [disabled]="!loginForm.valid" >
+                    Login</button>
+            </form>
+        </mat-card>
+    </div>
+
+      
+    
+
+</div>
