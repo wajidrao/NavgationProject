@@ -1,0 +1,12 @@
+.paragraphIntro1{
+    font-size: 20px;
+}
+.paragraphIntro{
+    padding: 10px;
+    width: 50%;
+    height: 300px;
+    float: left;
+    position:static;
+    right: 200px;
+    bottom: 200px;
+}

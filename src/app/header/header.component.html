@@ -7,14 +7,22 @@
       <button mat-flat-button style="margin-left: 50px;"routerLink="">Home</button>
        <button mat-flat-button style="margin-left: 10px;" [routerLink]="['signup']">Sign Up</button>
        <button mat-flat-button style="margin-left: 10px;" [routerLink]="['login']">Login</button>
-      <button mat-flat-button [matMenuTriggerFor]="menu" color="accent" style="margin-left :10px;" >Show</button>
+         
+      <button mat-flat-button [matMenuTriggerFor]="menu" color="accent" style="margin-left :10px;" >
+        Courses</button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>home
+        <button mat-menu-item [routerLink]="['java']"  >Java
         </button>
-        <button mat-menu-item disabled>disabled
+        <button mat-menu-item [routerLink]="['angular']">Angular
         </button>
-        <button mat-menu-item>about
+        <button mat-menu-item [routerLink]="['python']">Python
         </button>
+        <button mat-menu-item [matMenuTriggerFor]="subMenu" >More</button>
+      </mat-menu>
+      <mat-menu #subMenu="matMenu">
+        <button mat-menu-item>php</button>
+        <button mat-menu-item>html</button>
+        <button mat-menu-item>JS</button>
       </mat-menu>
     
 </mat-toolbar>

@@ -21,6 +21,13 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { JavaComponent } from './courses/java/java.component';
+import { AngularComponent } from './courses/angular/angular.component';
+import { PythonComponent } from './courses/python/python.component';
+import {MatRippleModule} from '@angular/material/core';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +36,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FooterComponent,
     SignupComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    JavaComponent,
+    AngularComponent,
+    PythonComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -44,7 +56,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatCheckboxModule,
     ReactiveFormsModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    MatRippleModule
     
   ],
   providers: [],
